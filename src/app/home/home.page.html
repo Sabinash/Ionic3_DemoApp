@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Demo App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Demo App</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div>
+    <ion-button color="primary" (click)="getData()">Get Data</ion-button>
+  </div>
+  <div>
+  <ion-scroll >
+    <ion-list >
+      <ion-item *ngFor="let item of items">
+        <ion-label>{{item.name}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-scroll>
+  </div>
+    <ion-button color="primary" (click)="uploadToDB()">Upload to FireBase</ion-button>
+  <div >
+  <ion-label>{{status}}</ion-label>
+</div>
+</ion-content>
